@@ -91,11 +91,6 @@ public class Player : MonoBehaviour
             InvokeRepeating("HpRecovery", hpRecoveryCooldown, hpRecoveryCooldown);
         }
 
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(30);
-        }
     }
 
     void UpdateUI()
