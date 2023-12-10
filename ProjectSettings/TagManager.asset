@@ -9,6 +9,7 @@ TagManager:
   - ActionBlock
   - Panel
   - hintText
+  - mushrooms
   layers:
   - Default
   - TransparentFX

@@ -18,7 +18,7 @@ public class ChangeDay : MonoBehaviour
 
     public static ChangeDay instance;
 
-    private void Start()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -44,6 +44,13 @@ public class ChangeDay : MonoBehaviour
         else if(!isEndDay)
         {
             player.transform.position = point.transform.position;
+
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject go in gos)
+                Destroy(go);
+            GameObject[] gos1 = GameObject.FindGameObjectsWithTag("mushrooms");
+            foreach (GameObject go1 in gos1)
+                Destroy(go1);
             isEndDay = true;
             timer = 0;
             if (day == 1)
@@ -57,17 +64,11 @@ public class ChangeDay : MonoBehaviour
             doorOpen.SetActive(false);
             doorClose.SetActive(true);
         }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            NextDay();
-        }
     }
 
     public void NextDay()
     {
-
-        if(isEndDay == true)
+        if (isEndDay == true)
         {
             day++;
             timer = lengthOfDay;

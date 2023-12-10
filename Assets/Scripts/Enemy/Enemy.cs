@@ -18,6 +18,10 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject go in gos)
+            player = (go);
+
         InvokeRepeating("AttackPlayer", attackInterval, attackInterval);
     }
 
