@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabecf52a8f2d334d80f17d9299f8ce8, type: 3}
+  m_Name: BaseForOintment
+  m_EditorClassIdentifier: 
+  itemName: "\u041E\u0441\u043D\u043E\u0432\u0430 \u0434\u043B\u044F \u043C\u0430\u0437\u0438"
+  itemImage: {fileID: 21300000, guid: 08036b72972fd6c479b3ff168641d266, type: 3}
+  quantity: 1
+  itemType: 5
+  itemDescription: "\u0418\u0437\u0433\u043E\u0442\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442\u0441\u044F
+    \u0432 \u0410\u043A\u0430\u0434\u0435\u043C\u0438\u0438, \u0441\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439
+    \u0440\u0435\u0446\u0435\u043F\u0442."
