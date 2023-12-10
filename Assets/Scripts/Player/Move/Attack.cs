@@ -46,12 +46,11 @@ public class Attack : MonoBehaviour
                 Debug.Log("Бац");
                 damageDone = true;
             }
-            else if(isAttacking && damageDone == false && collision.GetComponent<LiveChanterelle>() != null)
+            else if(isAttacking && damageDone == false && collision.GetComponent<CreatureController>() != null)
             {
-
-            }
-            else if(isAttacking && damageDone == false && collision.GetComponent<LiveChanterelle>() != null)
-            { 
+                Debug.Log("Бац");
+                damageDone = true;
+                collision.GetComponent<CreatureController>().Died();
             }
         }
     }

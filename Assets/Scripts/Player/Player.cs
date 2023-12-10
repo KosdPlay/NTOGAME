@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Attack attack;
 
+    [SerializeField] GameObject point;
+
     [SerializeField] private int gold = 100;
 
     [SerializeField] private Image lineBar;
@@ -60,7 +62,9 @@ public class Player : MonoBehaviour
 
     private void Death()
     {
-
+        this.transform.position = point.transform.position;
+        hp = 100;
+        UpdateUI();
     }
 
     private void HpRecovery()

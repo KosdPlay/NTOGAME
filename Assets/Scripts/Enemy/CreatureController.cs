@@ -15,6 +15,11 @@ public class CreatureController : MonoBehaviour
     private float fleeTimer;
     private bool fleeing;
 
+    public void Died()
+    {
+        Destroy(this.gameObject);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
