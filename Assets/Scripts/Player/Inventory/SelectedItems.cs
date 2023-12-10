@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectedItems : MonoBehaviour
+public class SelectedItems : Hint
 {
     [SerializeField] Item item;
     private bool hasBeenCollected = false;
@@ -13,6 +13,7 @@ public class SelectedItems : MonoBehaviour
         {
             if (other.CompareTag("Player") && !hasBeenCollected)
             {
+                HintConclusion("ֽאזלטעו E");
                 if (Input.GetKey(KeyCode.E))
                 {
                     if (item != null)
@@ -31,6 +32,17 @@ public class SelectedItems : MonoBehaviour
                         Debug.LogError("Item is null. Make sure to assign an Item in the Inspector.");
                     }
                 }
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (Time.timeScale == 1)
+        {
+            if (other.CompareTag("Player") && !hasBeenCollected)
+            {
+                HideHint();
             }
         }
     }

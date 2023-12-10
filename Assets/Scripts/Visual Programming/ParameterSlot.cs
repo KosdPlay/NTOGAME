@@ -29,7 +29,7 @@ public class ParameterSlot : MonoBehaviour
             occupied = true;
             installedItem = item;
             block.SetItem(installedItem);
-            return point.anchoredPosition + parentRectTransform.anchoredPosition;
+            return 2.5f * point.anchoredPosition + parentRectTransform.anchoredPosition;
         }
 
         return Vector2.zero;

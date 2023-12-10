@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdditionalAbilities : MonoBehaviour
+public class AdditionalAbilities : Hint
 {
     PlayerMove player;
     [SerializeField] Item item;
@@ -18,6 +18,7 @@ public class AdditionalAbilities : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
+                HintConclusion("ֽאזלטעו E");
                 if (Input.GetKey(KeyCode.E))
                 {
                     Item newItem = Instantiate(item);
@@ -39,6 +40,17 @@ public class AdditionalAbilities : MonoBehaviour
                     Destroy(this.gameObject);
                 }
                 
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (Time.timeScale == 1)
+        {
+            if (other.CompareTag("Player"))
+            {
+                HideHint();
+
             }
         }
     }

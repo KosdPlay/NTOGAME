@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MenuBase : PauseGame
 {
     [SerializeField] protected GameObject menu;
     protected bool open = false;
+
 
     protected void Awake()
     {
@@ -17,6 +19,7 @@ public class MenuBase : PauseGame
         Pause();
         menu.SetActive(true);
         open = true;
+        HideHint();
     }
 
     protected void CloseMenu()
@@ -26,5 +29,6 @@ public class MenuBase : PauseGame
         open = false;
 
     }
+
 
 }

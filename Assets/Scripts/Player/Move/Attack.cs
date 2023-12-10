@@ -34,11 +34,24 @@ public class Attack : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            if (isAttacking && damageDone == false)
+            if (isAttacking && damageDone == false && collision.GetComponent<LiveChanterelle>() != null)
             {
                 collision.GetComponent<LiveChanterelle>().TakeDamage(damage);
                 Debug.Log("Бац");
                 damageDone = true;
+            }
+            else if (isAttacking && damageDone == false && collision.GetComponent<Crystal>() != null)
+            {
+                collision.GetComponent<Crystal>().TakeDamage(damage);
+                Debug.Log("Бац");
+                damageDone = true;
+            }
+            else if(isAttacking && damageDone == false && collision.GetComponent<LiveChanterelle>() != null)
+            {
+
+            }
+            else if(isAttacking && damageDone == false && collision.GetComponent<LiveChanterelle>() != null)
+            { 
             }
         }
     }

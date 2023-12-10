@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class Diary : MenuBase
 {
     private int liveChanterelle = 0;
+
+    //вырезано
     private int wasp = 0;
     private int liveFlyAgaric = 0;
-    private bool killAll = false;
+
     private bool firstkill = false;
+
+    //вырезано
+    private bool killAll = false;
 
     [SerializeField] Tab tab;
 
@@ -26,37 +31,45 @@ public class Diary : MenuBase
 
     [Header("Bestiary")]
     [SerializeField] private List<string> headersBestiary = new List<string>();
-    [SerializeField] private List<string> descriptionsBestiary = new List<string> { "Это жук, который ест мишек" };
+    [SerializeField] private List<string> descriptionsBestiary = new List<string>();
     [SerializeField] private List<Sprite> bestiaryImages = new List<Sprite>();
 
     [Header("Locations")]
-    [SerializeField] private List<string> headersLocations = new List<string> { "Поляна", "Лаборатория" };
-    [SerializeField] private List<string> descriptionsLocations = new List<string> { "Поляна самая безопасная локация, в ней можно найти различные цветы", "Здесь можно купить, продать и создавать различные штуки" };
+    [SerializeField] private List<string> headersLocations = new List<string>();
+    [SerializeField] private List<string> descriptionsLocations = new List<string>();
     [SerializeField] private List<Sprite> locationsImages = new List<Sprite>();
 
 
     [Header("Resources")]
-    [SerializeField] private List<string> headersResources = new List<string> { "Вода", "Мухомор", "Белый гриб" };
-    [SerializeField] private List<string> descriptionsResources = new List<string> { "Основа для отваров", "Компонент многих лекарств, ядовит", "Компонент многих лекарств, не ядовит" };
+    [SerializeField] private List<string> headersResources = new List<string>();
+    [SerializeField] private List<string> descriptionsResources = new List<string>();
     [SerializeField] private List<Sprite> resourcesImages = new List<Sprite>();
 
     [Header("Story")]
-    [SerializeField] private List<string> headersStory = new List<string> { "Ну привет3", "Давно не виделись3", "Для тебя кое-что есть4", "Заходи не пожалеешь6" };
-    [SerializeField] private List<string> descriptionsStory = new List<string> { "Ну привет3", "Давно не виделись3", "Для тебя кое-что есть4", "Заходи не пожалеешь6" };
+    [SerializeField] private List<string> headersStory = new List<string>();
+    [SerializeField] private List<string> descriptionsStory = new List<string>();
     [SerializeField] private List<Sprite> storyImages = new List<Sprite>();
 
     [Header("Recipes")]
-    [SerializeField] private List<string> headersRecipes = new List<string> { "Мазь из мухомора", "апывапр", "Для тебя кое-что есть4", "Заходи не пожалеешь6" };
-    [SerializeField] private List<string> descriptionsRecipes = new List<string> { "Берём мухомор, режим туда-сюда и готово", "аепвгпангв", "Заходи не пожалеешь6" };
+    [SerializeField] private List<string> headersRecipes = new List<string>();
+    [SerializeField] private List<string> descriptionsRecipes = new List<string>();
     [SerializeField] private List<Sprite> recipesImages = new List<Sprite>();
 
     [Header("Training")]
-    [SerializeField] private List<string> headersTraining = new List<string> { "ходьба", "апывапр", "Для тебя кое-что есть4", "Заходи не пожалеешь6" };
-    [SerializeField] private List<string> descriptionsTraining = new List<string> { "жми A D и иди куда хочешь", "жыалдап", "рджйшщцрдкшыгр" };
+    [SerializeField] private List<string> headersTraining = new List<string>();
+    [SerializeField] private List<string> descriptionsTraining = new List<string>();
     [SerializeField] private List<Sprite> trainingImages = new List<Sprite>();
+
+
+    private void OnEnable()
+    {
+        HintConclusion("Нажмите H");
+    }
 
     private void Start()
     {
+
+
         switch (tab)
         {
             case Tab.Bestiary:
@@ -441,6 +454,9 @@ public class Diary : MenuBase
             case "liveFlyAgaric":
                 liveFlyAgaric++;
                 break;
+            case "Cristal":
+                liveFlyAgaric++;
+                break;
         }
 
         if (!firstkill && (wasp >= 1 || liveChanterelle >= 1 || liveFlyAgaric >= 1))
@@ -451,6 +467,7 @@ public class Diary : MenuBase
             firstkill = true;
             Debug.Log("firstkill");
         }
+        //вырезано
         if (wasp >= 1 && liveChanterelle >= 1 && liveFlyAgaric >= 1 && !killAll)
         {
             headersStory.Add("Флора и Фауна");

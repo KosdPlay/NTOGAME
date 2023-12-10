@@ -14,7 +14,7 @@ public class ImprovementStoreMenu : MenuBase
 
     [SerializeField] TextMeshProUGUI gold;
 
-    private readonly string[] welcomeSpeech = {"Ну привет", "Давное не виделись", "Для тебя кое-что есть", "Заходи не пожалеешь"};
+    private readonly string[] welcomeSpeech = { "Ну привет", "Давное не виделись", "Для тебя кое-что есть", "Заходи не пожалеешь" };
 
     [SerializeField] private string[] descriptionItems = new string[11];
 
@@ -35,10 +35,18 @@ public class ImprovementStoreMenu : MenuBase
     {
         if (collision.CompareTag("Player"))
         {
+            HintConclusion("Нажмите E");
             if (Input.GetKey(KeyCode.E) && !open)
             {
                 OpenMenu();
             }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            HideHint();
         }
     }
 
@@ -143,11 +151,11 @@ public class ImprovementStoreMenu : MenuBase
 
     public void Buy()
     {
-        if(idButton == -1)
+        if (idButton == -1)
         {
 
         }
-        else if (player.GetGold() >= price[idButton] && count[idButton] > 0)
+        else if (count[idButton] > 0 && player.GetGold() >= -(price[idButton]))
         {
             switch (idButton)
             {
@@ -179,7 +187,7 @@ public class ImprovementStoreMenu : MenuBase
                 idButton = -1;
             }
         }
-        else if (count[idButton] > 0 && player.GetGold() < price[idButton])
+        else if (count[idButton] > 0 && player.GetGold() < -(price[idButton]))
         {
             description.text = "Не хватает денег.";
         }

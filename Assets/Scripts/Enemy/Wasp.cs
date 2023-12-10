@@ -38,7 +38,7 @@ public class Wasp : Enemy
         if (isMovingRight)
         {
             // Двигаться вправо
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Проверить, достиг ли противник конечной точки
             if (currentPosition.x >= originalPosition.x + patrolRange)
@@ -49,7 +49,7 @@ public class Wasp : Enemy
         else
         {
             // Двигаться влево
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
             // Проверить, достиг ли противник начальной точки
             if (currentPosition.x <= originalPosition.x - patrolRange)
