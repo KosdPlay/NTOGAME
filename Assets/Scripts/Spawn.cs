@@ -26,7 +26,6 @@ public class Spawn : MonoBehaviour
         {
             Instantiate(prefab, transform.position, Quaternion.identity);
             isSpawn = true;
-            Debug.Log("kjfjhegralijghbksd,fjhghsdfsgfhjhgf");
         }
         else if (ChangeDay.instance.isEndDay == false)
         {

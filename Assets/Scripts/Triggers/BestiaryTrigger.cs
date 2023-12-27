@@ -11,8 +11,15 @@ public class BestiaryTrigger : MonoBehaviour
     [SerializeField] string descriptionLocations;
     [SerializeField] string enemyName;
 
+    private void Start()
+    {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Diary");
+        foreach (GameObject go in gos)
+            diaryScript = (go.GetComponent<Diary>());
+    }
+
     private void OnDisable()
     {
-        diaryScript.HandleBestiaryTrigger(ImageLocation, headerLocations, descriptionLocations, enemyName);
+            diaryScript.HandleBestiaryTrigger(ImageLocation, headerLocations, descriptionLocations, enemyName);
     }
 }

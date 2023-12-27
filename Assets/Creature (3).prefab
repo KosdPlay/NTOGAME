@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3317191802530198417}
   - component: {fileID: 3317191802530198430}
   - component: {fileID: 3317191802530198431}
-  - component: {fileID: 7858230107924546136}
+  - component: {fileID: 2919362798186440143}
   m_Layer: 0
   m_Name: Creature (3)
   m_TagString: Enemy
@@ -152,7 +152,7 @@ MonoBehaviour:
   patrolTime: 3
   fleeTime: 2
   playerTag: Player
---- !u!95 &7858230107924546136
+--- !u!95 &2919362798186440143
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Animator:
   m_GameObject: {fileID: 3317191802530198428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d734132bd0ea5342b187dde9c6de9e7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a8d55398ae34d340a71e63ddf2c930d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

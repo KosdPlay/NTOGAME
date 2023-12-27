@@ -66,7 +66,6 @@ public class LiveChanterelle : Enemy
         else
         {
             animator.SetBool("Attack", false);
-            Debug.Log("lgyuigklygluirfd");
         }
     }
 
@@ -102,7 +101,6 @@ public class LiveChanterelle : Enemy
     private void ShootSingleProjectile()
     {
         Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        Debug.Log("Shoot Single Projectile");
     }
 
     private IEnumerator ShootTripleProjectileUpCoroutine()
@@ -117,6 +115,5 @@ public class LiveChanterelle : Enemy
     private void ShootTripleProjectileUp()
     {
         Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, -90));
-        Debug.Log("Shoot Triple Projectile Up");
     }
 }

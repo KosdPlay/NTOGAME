@@ -10,6 +10,7 @@ TagManager:
   - Panel
   - hintText
   - mushrooms
+  - Diary
   layers:
   - Default
   - TransparentFX

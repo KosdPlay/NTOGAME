@@ -175,6 +175,7 @@ public class Panel : MonoBehaviour
                 InventoryManager.instance.AddItem(Dummy);
             }
         }
+        Debug.Log(blocks[0].installedItem);
     }
 
     private void RemuveRemoveItems()
