@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2560119423340796370}
   - component: {fileID: 2560119423340796205}
   - component: {fileID: 2560119423340796207}
-  - component: {fileID: 4885480038320641497}
   - component: {fileID: -2668640512873501492}
   - component: {fileID: 2739172828669965054}
   - component: {fileID: 5889182418858423560}
+  - component: {fileID: 2623962802722367009}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -88,25 +88,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2560119423340796206}
   m_Enabled: 1
---- !u!114 &4885480038320641497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2560119423340796206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac4d9525097e434e86aef603929fb40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dumping: 1.5
-  offset: {x: 2, y: 1}
-  isLeft: 0
-  leftLimit: -100
-  rightLimit: 100
-  bottomLimit: 0
-  upperLimit: 0
 --- !u!61 &-2668640512873501492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1038ca40ccb1904cb54fc180469894c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintText: {fileID: 0}
 --- !u!82 &5889182418858423560
 AudioSource:
   m_ObjectHideFlags: 0
@@ -241,3 +223,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2623962802722367009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560119423340796206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
